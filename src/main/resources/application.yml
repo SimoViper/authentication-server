@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: authentication-server
+
+server:
+  port: 8080
+  servlet:
+    context-path: /auth
+
+user:
+  oauth:
+    clientId: R2dpxQ3vPrtfgF72
+    clientSecret: fDw7Mpkk5czHNuSRtmhGmAGL42CaxQB9
+
+security:
+  signing-key: MaYzkSjmkzPC57L
+  encoding-strength: 256
+  security-realm: Spring Boot JWT App
+  jwt:
+    key-store: classpath:keystore.jks
+    key-store-password: password
+    key-pair-alias: servercert
+    key-pair-password: password
+
+logging:
+  level:
+    root: INFO
